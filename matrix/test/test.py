@@ -18,10 +18,14 @@ while columnsMatrix2 <= 0:
 
 matrix2 = Matrix(rows=rowsMatrix2, columns=columnsMatrix2)
 
-matrixResult = matrix1 * matrix2
-  
-matrixResult.showMatrix()
+print()
 
+try : 
+    matrixResult = matrix1 * matrix2
+    matrixResult.showMatrix()
+
+except ValueError as e:
+    print(e)
 
 
             
