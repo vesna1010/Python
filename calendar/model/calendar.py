@@ -17,12 +17,17 @@ class Calendar:
         print('{:5s}'.format('') * weekDay, end='')
                   
         while currentDate.month == self.month:
-            print("{:5d}".format(currentDate.day), end='')
+            weekDay = currentDate.weekday();
             
-            if currentDate.weekday() == 6:
-                print() 
-                
+            if weekDay == 6 :
+                print("{:5d}".format(currentDate.day))
+            else:
+                print("{:5d}".format(currentDate.day), end='')
+                 
             currentDate = currentDate + oneDay
+            
+
+            
 
             
             
