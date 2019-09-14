@@ -32,7 +32,7 @@ class Card:
         for i in range(9):
             for j in range(9):
                 key = str(i) + str(j)
-                print('|{:5s}'.format(str(self.card_numbers.get(key, ''))), end='')
+                print('{:>5s}|'.format(str(self.card_numbers.get(key, ''))), end='')
             print()
                 
             if (i + 1) % 3 == 0:
