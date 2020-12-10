@@ -22,7 +22,7 @@ class Sudoku:
     
     @staticmethod
     def moveOrderElements(elements):
-        lastElement = elements[len(elements) - 1]
+        lastElement = elements[ - 1]
         
         for i in range((len(elements) - 1), 0, -1):
             elements[i] = elements[i - 1]
