@@ -1,6 +1,6 @@
 from model.sudoku import Sudoku
 
 s = Sudoku()
-s.showMatrix();
 
+s.show_matrix()
 
