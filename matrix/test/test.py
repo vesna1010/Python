@@ -1,31 +1,41 @@
 from model.matrix import Matrix
 
-rowsMatrix1 = columnsMatrix1 = rowsMatrix2 = columnsMatrix2 = 0
+number_of_rows_matrix1 = number_of_columns_matrix1 = number_of_rows_matrix2 = number_of_columns_matrix2 = 0
 
-while rowsMatrix1 <= 0:
-    rowsMatrix1 = int(input('Enter number of rows in first matrix: '))
+while number_of_rows_matrix1 <= 0:
+    number_of_rows_matrix1 = int(input('Enter number of rows in first matrix: '))
 
-while columnsMatrix1 <= 0:
-    columnsMatrix1 = int(input('Enter number of columns in first matrix: '))
+while number_of_columns_matrix1 <= 0:
+    number_of_columns_matrix1 = int(input('Enter number of columns in first matrix: '))
 
-matrix1 = Matrix(rows=rowsMatrix1, columns=columnsMatrix1)    
+matrix1 = Matrix(number_of_rows=number_of_rows_matrix1, number_of_columns=number_of_columns_matrix1)    
     
-while rowsMatrix2 <= 0:
-    rowsMatrix2 = int(input('Enter number of rows in second matrix: '))
+while number_of_rows_matrix2 <= 0:
+    number_of_rows_matrix2 = int(input('Enter number of rows in second matrix: '))
 
-while columnsMatrix2 <= 0:
-    columnsMatrix2 = int(input('Enter number of columns in second matrix: '))
+while number_of_columns_matrix2 <= 0:
+    number_of_columns_matrix2 = int(input('Enter number of columns in second matrix: '))
 
-matrix2 = Matrix(rows=rowsMatrix2, columns=columnsMatrix2)
+matrix2 = Matrix(number_of_rows=number_of_rows_matrix2, number_of_columns=number_of_columns_matrix2)  
 
 print()
 
 try : 
-    matrixResult = matrix1 * matrix2
-    matrixResult.showMatrix()
-
+    matrix_result1 = matrix1 * matrix2
+    matrix_result1.show_matrix()
 except ValueError as e:
     print(e)
+    
+    print()
+    
+try :     
+    matrix_result2 = matrix1 + matrix2
+    matrix_result2.show_matrix()
+except ValueError as e:
+    print(e)
+
+
+
 
 
             
