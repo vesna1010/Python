@@ -1,19 +1,8 @@
 class Matrix:
     
-    def __init__(self, matrix=None, number_of_rows=0, number_of_columns=0):
-        if matrix:
-            self.matrix = matrix
-            
-        elif number_of_rows > 0 and number_of_columns > 0:
-            self.matrix = [[None for i in range(number_of_columns)] for j in range(number_of_rows)]
-            
-            for i in range(number_of_rows):
-                for j in range(number_of_columns):
-                    self.matrix[i][j] = int(input('matrix[{0}][{1}] = '.format(i, j)))
-    
-        else:
-            raise ValueError('Enter the number of rows and columns in the matrix!')
-    
+    def __init__(self, matrix):
+        self.matrix = matrix
+      
     def __mul__(self, other_matrix):
         matrix_result = [[None for i in range(len(other_matrix.matrix[0]))] for j in range(len(self.matrix))]
         
@@ -46,6 +35,7 @@ class Matrix:
             for j in range(len(self.matrix[i])):
                 print('{:5d}'.format(self.matrix[i][j]), end='')
             print() 
+
 
 
         
