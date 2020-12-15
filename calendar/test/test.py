@@ -11,4 +11,4 @@ while not 1 <= month <= 12:
 print()
 
 c = Calendar(year, month) 
-c.showCalendar()
+c.show_calendar()
